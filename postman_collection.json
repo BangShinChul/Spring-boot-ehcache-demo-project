@@ -66,6 +66,67 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "get /hr/map",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hr/map",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hr",
+						"map"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get /hr/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hr/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hr",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get /hr/list/{department}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hr/list/Dev",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hr",
+						"list",
+						"Dev"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
