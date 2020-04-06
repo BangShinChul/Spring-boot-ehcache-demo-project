@@ -9,5 +9,6 @@ import java.util.List;
 @Repository
 public interface HumanResourceRepository extends JpaRepository<HumanResource, Long> {
     public List<HumanResource> findByDepartment(HumanResource.Department department);
+    public List<HumanResource> findByDepartmentAndName(HumanResource.Department department, String name);
 
 }

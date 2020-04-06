@@ -112,6 +112,28 @@
         </resources>
     </cache>
 
+    <cache alias="hrListByDepartmentAndNameCache">
+        <key-type>java.util.List</key-type>
+        <value-type>java.util.List</value-type>
+        <expiry>
+            <ttl unit="minutes">3</ttl>
+        </expiry>
+
+        <listeners>
+            <listener>
+                <class>com.example.ehcache.demo.config.CacheEventLogger</class>
+                <event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+                <event-ordering-mode>UNORDERED</event-ordering-mode>
+                <events-to-fire-on>CREATED</events-to-fire-on>
+                <events-to-fire-on>EXPIRED</events-to-fire-on>
+            </listener>
+        </listeners>
+
+        <resources>
+            <heap unit="entries">10</heap>
+        </resources>
+    </cache>
+
     <cache alias="hrByDepartmentCache">
         <key-type>org.springframework.cache.interceptor.SimpleKey</key-type>
         <value-type>java.util.Map</value-type>

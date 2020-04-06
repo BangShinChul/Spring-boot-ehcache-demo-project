@@ -39,4 +39,11 @@ public class HrController {
         log.info("call api getHrByDepartment");
         return new ResponseEntity<List<HumanResource>>(hrService.getHrListByDepartment(department), HttpStatus.OK);
     }
+
+    @GetMapping(path = "/list/{department}/{name}")
+    public ResponseEntity<List<HumanResource>> getHrByDepartmentAndName(
+            @PathVariable String department, @PathVariable String name) {
+        log.info("call api getHrByDepartmentAndName");
+        return new ResponseEntity<List<HumanResource>>(hrService.getHrListByDepartmentAndName(department, name), HttpStatus.OK);
+    }
 }

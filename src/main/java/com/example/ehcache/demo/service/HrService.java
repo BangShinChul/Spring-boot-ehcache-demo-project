@@ -25,4 +25,8 @@ public class HrService {
     public List<HumanResource> getHrListByDepartment(String department) {
         return hrTxManager.getHrListByDepartment(department);
     }
+
+    public List<HumanResource> getHrListByDepartmentAndName(String department, String name) {
+        return hrTxManager.getHrListByDepartmentAndName(department, name);
+    }
 }
